@@ -1,0 +1,105 @@
+@use "../utils/variables" as v;
+.footer {
+    background-color: #2f303a;
+    padding: 60px 0;
+    .footer-container {
+        display: flex;
+    }
+    &__address {
+        padding-top: 9px;
+        color: map-get($map: v.$colors, $key: "primary");
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        a:hover {
+            color: #ffffff;
+        }
+    }
+    &__text {
+        color: white;
+        font-family: Roboto;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    &__icon-wrapper {
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        &:hover {
+            background-color: map-get($map: v.$colors, $key: "accent");
+            transition-duration: v.$animation-time;
+            transition-timing-function: v.$timing-function;
+        }
+    }
+    &__form {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+    &__submit-button {
+        display: inline-flex;
+        align-items: center;
+        background-color: map-get($map: v.$colors, $key: "accent");
+        border: 4px solid map-get($map: v.$colors, $key: "accent");
+        border-radius: 4px;
+        padding: 6px 24px 6px 44px;
+        height: 50px;
+        color: #fff;
+        font: 700 16px/30px Roboto;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        fill: #fff;
+        transition-duration: 0.4s;
+
+        &:hover {
+            border: 4px solid map-get($map: v.$colors, $key: "accent");
+            background-color: map-get($map: v.$colors, $key: "background-grey");
+            color: #000000;
+            fill: #000000;
+        }
+        svg {
+            margin-left: 30px;
+            height: 24px;
+            width: 24px;
+        }
+    }
+}
+
+.left-padding-container {
+    margin-left: 70px;
+}
+
+.footer-icons-list {
+    div {
+        height: 44px;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
+    }
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+.footer-email-input {
+    color: rgba(255, 255, 255, 0.3);
+    width: 348px;
+    padding: 16px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    &:focus {
+        background: none;
+        border: 1px solid #fff;
+        color: #fff;
+        outline: none;
+        &::placeholder {
+            color: #fff;
+            opacity: 0.8;
+        }
+    }
+}

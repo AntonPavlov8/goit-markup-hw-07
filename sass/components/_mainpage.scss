@@ -1,0 +1,197 @@
+@use "../utils/variables" as v;
+
+body {
+    position: relative;
+    margin: auto;
+    background-color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+.container {
+    padding: 0 15px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    color: map-get($map: v.$colors, $key: "accent");
+    font-family: "raleway";
+    font-size: 26px;
+}
+
+.section {
+    padding: 94px 0;
+}
+
+.section-no-top-padding {
+    padding-top: 0;
+}
+
+.headers {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #212121;
+    line-height: 42.19px;
+}
+.hero {
+    padding: 200px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/herobg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    &__title {
+        margin: auto;
+        color: #ffffff;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 60px;
+    }
+    &__button {
+        font-weight: 700;
+        margin-top: 40px;
+        background-color: map-get($map: v.$colors, $key: "accent");
+        border: 4px solid map-get($map: v.$colors, $key: "accent");
+        border-radius: 4px;
+        padding: 15px 24px;
+        font-size: 16px;
+        color: #ffffff;
+        transition-duration: 0.4s;
+        &:hover {
+            border: 4px solid map-get($map: v.$colors, $key: "accent");
+            background-color: map-get($map: v.$colors, $key: "background-grey");
+            color: #000000;
+            cursor: pointer;
+        }
+    }
+}
+
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    &__item {
+        line-height: 24px;
+        font-size: 14px;
+        width: 270px;
+    }
+}
+.feature {
+    &__image {
+        background-color: map-get($map: v.$colors, $key: "background-grey");
+        width: auto;
+        padding: 25px 100px;
+        margin-bottom: 30px;
+    }
+    &__header {
+        font-weight: 700;
+        line-height: 16.41px;
+    }
+    &__text {
+        padding-top: 9px;
+        color: map-get($map: v.$colors, $key: "primary");
+    }
+}
+
+.whatWeDo-list {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    &__item {
+        position: relative;
+    }
+    &__text {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(33, 33, 33, 0.8);
+        font: 700 16px Roboto;
+        color: white;
+        text-align: center;
+        padding: 27px 0;
+    }
+}
+
+.team-section {
+    background-color: map-get($map: v.$colors, $key: "background-grey");
+    padding: 94px 0 94px 0;
+    text-align: center;
+}
+
+.team-list {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.team-member {
+    background-color: #ffffff;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    &__image {
+        margin-bottom: 30px;
+    }
+    &__name {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+        margin-bottom: 10px;
+    }
+    &__text {
+        color: map-get($map: v.$colors, $key: "primary");
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+    }
+    &__social-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px 32px 30px;
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: map-get($map: v.$colors, $key: "icon-color");
+        }
+    }
+    &__link {
+        border-radius: 50%;
+        padding: 12px;
+        &:hover {
+            background-color: map-get($map: v.$colors, $key: "accent");
+            transition-duration: v.$animation-time;
+            transition-timing-function: v.$timing-function;
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+.customer-list {
+    padding-top: 50px;
+    display: flex;
+    gap: 30px;
+    &__item {
+        padding: 16px 32px;
+        border: 1px solid map-get($map: v.$colors, $key: "icon-color");
+        border-radius: 4px;
+        display: inline-block;
+        &:hover {
+            border-color: map-get($map: v.$colors, $key: "accent");
+            svg {
+                fill: map-get($map: v.$colors, $key: "accent");
+            }
+        }
+        .customer-icon {
+            height: 60px;
+            width: 106px;
+            fill: map-get($map: v.$colors, $key: "icon-color");
+        }
+    }
+}
