@@ -25,7 +25,7 @@
     width: 528px;
     background-color: #fff;
     z-index: 3;
-    &__button {
+    .modal__button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,13 +41,13 @@
         &:hover {
             fill: map-get($map: v.$colors, $key: "accent");
         }
-        &__icon {
+        .modal__button__icon {
             height: 18px;
             width: 18px;
             margin-right: 1px;
         }
     }
-    &__text {
+    .modal__text {
         font: 700 20px/24px Roboto;
         margin: 40px 40px 12px 40px;
     }
@@ -60,14 +60,6 @@
     background: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    &__icon {
-        height: 18px;
-        width: 18px;
-        position: absolute;
-        bottom: 15px;
-        left: 12px;
-        fill: #212121;
-    }
     &:focus {
         background: none;
         border: 1px solid map-get($map: v.$colors, $key: "accent");
@@ -78,52 +70,54 @@
             opacity: 0.8;
         }
     }
+    + .input__icon {
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        bottom: 15px;
+        left: 12px;
+        fill: #212121;
+    }
+}
+.form__label {
+    margin-top: 10px;
+    position: relative;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    font: 400 12px/14px Roboto;
+    color: #757575;
 }
 .form {
-    &__label {
-        margin-top: 10px;
-        position: relative;
-        margin-left: 40px;
-        display: flex;
-        flex-direction: column;
-        font: 400 12px/14px Roboto;
-        color: #757575;
-    }
-    &__textarea {
+    .form__textarea {
         height: 120px;
         padding: 12px;
         resize: none;
     }
-    &__submit-button {
+    .form__submit-button {
         margin-bottom: 40px;
-        background-color: map-get($map: v.$colors, $key: "accent");
-        border: 4px solid map-get($map: v.$colors, $key: "accent");
-        border-radius: 4px;
         padding: 6px 76px;
-        color: #fff;
-        font: 700 16px/30px Roboto;
-        letter-spacing: 0.06em;
-        cursor: pointer;
-        transition-duration: 0.4s;
-        &:hover {
-            border: 4px solid map-get($map: v.$colors, $key: "accent");
-            background-color: map-get($map: v.$colors, $key: "background-grey");
-            color: #000000;
-        }
     }
 }
-
 .checkbox {
-    &__label {
-        margin: 25px 52px 10px 52px;
-        flex-direction: row;
-        align-items: flex-start;
-        font: 400 14px/24px Roboto;
-    }
-    &__margin {
+    margin: 25px 52px 10px 52px;
+    font: 400 14px/24px Roboto;
+    display: flex;
+    flex-direction: row;
+    .checkbox__margin {
         margin-right: 8px;
     }
-    &__icon {
+    .checkbox__appearance {
+        display: flex;
+        margin-top: 4px;
+        padding: 0;
+        width: 15px;
+        height: 15px;
+        appearance: none;
+        border: 2px solid #000000;
+        border-radius: 2px;
+    }
+    .checkbox__icon {
         height: 15px;
         width: 15px;
         border-radius: 2px;
@@ -133,17 +127,7 @@
         left: 0;
         background-color: map-get($map: v.$colors, $key: "accent");
     }
-    &__appearance {
-        margin-top: 4px;
-        padding: 0;
-        width: 16px;
-        height: 15px;
-        appearance: none;
-        border: 2px solid #000000;
-        border-radius: 2px;
-    }
 }
-
 .input:focus + .input__icon {
     fill: map-get($map: v.$colors, $key: "accent");
 }

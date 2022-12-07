@@ -64,16 +64,16 @@
             transition-timing-function: v.$timing-function;
         }
     }
-    &__description {
+    .card__description {
         border: 1px solid #eeeeee;
         border-top: none;
         padding: 20px 24px;
     }
-    &__name {
+    .card__name {
         letter-spacing: 0.06em;
         font: 700 18px/36px Roboto;
     }
-    &__text {
+    .card__text {
         letter-spacing: 0.06em;
         font-size: 16px;
         line-height: 30px;

@@ -2,29 +2,28 @@
 .header {
     margin: auto;
     border-bottom: 1px solid #ececec;
-    &__content {
+    .header__content {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
     }
-    &__nav {
+    .header__nav {
         display: flex;
         align-items: center;
     }
-    &__item {
+    .header__item {
         position: relative;
         display: inline-block;
         &:not(:last-child) {
             margin-right: 60px;
         }
     }
-    &__ul {
+    .header__ul {
         margin-left: 97px;
         display: flex;
         align-items: center;
     }
-    &__contacts {
-        display: block;
+    .header__contacts {
         padding: 32px 0px 31px 0px;
         font-weight: 500;
         color: map-get($map: v.$colors, $key: "primary");
@@ -32,13 +31,12 @@
             color: map-get($map: v.$colors, $key: "accent");
         }
     }
-    &__link {
-        display: block;
+    .header__link {
         padding: 32px 0px 31px 0px;
         font-weight: 500;
         color: #212121;
     }
-    &__link--active {
+    .header__link--active {
         position: relative;
         padding: 32px 0px 31px 0px;
         font-weight: 500;
@@ -54,7 +52,7 @@
             left: 0;
         }
     }
-    &__icon {
+    .header__icon {
         max-width: 16px;
         max-height: 16px;
     }
@@ -64,9 +62,9 @@
         flex-direction: row;
         align-items: center;
         gap: 10px;
-    }
-    a:hover {
-        color: map-get($map: v.$colors, $key: "accent");
-        fill: map-get($map: v.$colors, $key: "accent");
+        &:hover {
+            color: map-get($map: v.$colors, $key: "accent");
+            fill: map-get($map: v.$colors, $key: "accent");
+        }
     }
 }
